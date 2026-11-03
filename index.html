@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Saez Music</title>
+    <meta name="description" content="Application mobile officielle Saez Music - Streaming musical haute fidélité" />
+    <meta name="theme-color" content="#0a0e17" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        try {
+          Object.defineProperty(document, 'hidden', { get: function() { return false; } });
+          Object.defineProperty(document, 'visibilityState', { get: function() { return 'visible'; } });
+          window.addEventListener('visibilitychange', function(e) {
+            e.stopImmediatePropagation();
+          }, true);
+          window.addEventListener('blur', function(e) {
+            e.stopImmediatePropagation();
+          }, true);
+        } catch (e) {}
+      })();
+    </script>
+    <script src="https://www.youtube.com/iframe_api" async defer></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
